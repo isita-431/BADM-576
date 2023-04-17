@@ -3,7 +3,7 @@ import mlflow.sklearn
 import pandas as pd
 
 # Load the saved model
-model_uri = "https://github.com/ashish-cell/BADM-576/tree/main/artifacts"
+model_uri = "artifacts/model"
 model = mlflow.sklearn.load_model("model.pkl")
 
 # Define a function to make predictions
