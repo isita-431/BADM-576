@@ -3,7 +3,7 @@ import mlflow.sklearn
 import pandas as pd
 
 # Load the saved model
-model_uri = "C:\\Users\\ashishk\\Box\\UIUC Teaching\\Spring_23\\BADM 576\\ML Ops\\mlruns\\0\\b441e19f8a6c480c899f4429dc6e63b5\\artifacts\\model"
+model_uri = "https://github.com/ashish-cell/BADM-576.git"
 model = mlflow.sklearn.load_model(model_uri)
 
 # Define a function to make predictions
