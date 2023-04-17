@@ -1,3 +1,9 @@
+import subprocess
+
+# Print installed packages
+print(subprocess.check_output(["pip", "freeze"]).decode("utf-8"))
+
+
 import streamlit as st
 import mlflow.sklearn
 import pandas as pd
