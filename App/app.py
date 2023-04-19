@@ -9,8 +9,8 @@ import mlflow.sklearn
 import pandas as pd
 
 # Load the saved model
-model_uri = "https://github.com/ashish-cell/BADM-576/find/main/artifacts/model"
-model = mlflow.sklearn.load_model("model.pkl")
+model_uri = "https://github.com/isita-431/BADM-576/blob/main/App/artifacts/model/model.pkl"
+model = mlflow.sklearn.load_model(model_uri)
 
 # Define a function to make predictions
 def predict(data):
