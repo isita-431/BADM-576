@@ -4,5 +4,6 @@ scikit-learn
 feature-engine
 numpy
 matplotlib
+requests
 mlflow
 pickle
