@@ -5,12 +5,14 @@ print(subprocess.check_output(["pip", "freeze"]).decode("utf-8"))
 
 
 import streamlit as st
+import pickle
 import mlflow.sklearn
 import pandas as pd
 
 # Load the saved model
 model_uri = "https://github.com/isita-431/BADM-576/blob/main/App/artifacts/model/model.pkl"
-model = mlflow.sklearn.load_model(model_uri)
+response = requests.get(model_uri)
+model = pickle.loads(response.content)
 
 # Define a function to make predictions
 def predict(data):
