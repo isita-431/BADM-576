@@ -4,6 +4,7 @@ import subprocess
 print(subprocess.check_output(["pip", "freeze"]).decode("utf-8"))
 import cloudpickle
 import requests
+import io
 import streamlit as st
 # import pickle
 import mlflow.sklearn
@@ -12,7 +13,10 @@ import pandas as pd
 # Load the saved model
 model_uri = "https://github.com/isita-431/BADM-576/blob/main/App/artifacts/model/model.pkl"
 response = requests.get(model_uri)
-model = cloudpickle.load(response.content)
+model = cloudpickle.load(io.BytesIO(response.content))
+
+# with open('path/to/file', 'rb') as f:
+#     model = cloudpickle.load(f)
 
 # Define a function to make predictions
 def predict(data):
