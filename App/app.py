@@ -3,7 +3,7 @@ import subprocess
 # Print installed packages
 print(subprocess.check_output(["pip", "freeze"]).decode("utf-8"))
 
-
+import requests
 import streamlit as st
 import pickle
 import mlflow.sklearn
